@@ -9,7 +9,25 @@ public class Program
 {
 	public static int CountVowels(string s)
 	{
-		// ИЗМЕНИТЕ КОД ЭТОГО МЕТОДА
+		try
+		{
+		    int count = 0;
+		    string str = s.Replace(" ", "");
+
+		    for(int i = 0; i < str.Length; i++)
+		    {
+			if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u')
+			{
+			    count++;
+			}
+		    }
+		    return count;
+		}
+		catch (ArgumentNullException ex)
+		{
+		    Console.WriteLine(ex.Message);
+		}
+		
 		return -1;
 	}
 
